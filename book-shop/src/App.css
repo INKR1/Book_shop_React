@@ -1,5 +1,5 @@
 body{
-  background-image: url("./Components/image/book.jpg");
+  background-image: url("./Components/image/book1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -135,7 +135,7 @@ body{
 }
 
 .kv svg.like {
-  fill: red;
+  fill: darkblue;
 }
 .kv.big small {
   margin: 10px 0;
@@ -191,7 +191,7 @@ body{
 .cart svg {
   width: 40px;
   height: 40px;
-  fill: plum;
+  fill: darkblue;
   cursor: pointer;
 }
 .cart .box {
