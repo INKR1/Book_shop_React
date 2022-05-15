@@ -177,7 +177,7 @@ function App() {
     return (
         
         <div className="App">
-            <h1>Books Store</h1>
+            <h1>Book Store</h1>
             <div className="kvc">
                 <div className='arrow_container'>
                     <svg className='arrow arrow_up ' onClick={() => setSort('asc')}>
@@ -198,7 +198,7 @@ function App() {
                     <use  xlinkHref="#cart"></use>
                 </svg>
                 <span>{booksCartPrice}</span>
-                <div className="bin">
+                <div className="box">
                     <Cart openCart={openCart} setOpenCart={setOpenCart} cartView={cartView}/>
                 </div>
             </div>

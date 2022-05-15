@@ -194,7 +194,7 @@ body{
   fill: plum;
   cursor: pointer;
 }
-.cart .bin {
+.cart .box {
   position: absolute;
   top: 40px;
   right: 0px;
@@ -203,17 +203,17 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: 5px 5px;
 }
 
 .nice-cart {
-  width: 300px;
-  padding: 6px;
+  width: 400px;
+  padding: 10px;
   border: 3px solid lightblue;
-  min-height: 200px;
+  min-height: 100px;
   background-color: #fff;
   position: relative;
-  padding-top: 30px;
+  padding-top: 20px;
   opacity: 0.7;
 }
 
