@@ -1,1 +1,1 @@
-# Books_shop_React
+# Books Store Simulator with React
