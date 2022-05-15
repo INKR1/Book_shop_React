@@ -1,5 +1,6 @@
 class Books {
 
+    // KNYGU KIEKIS KREPSELY
     static getCartCount(cart) {
         let totalCount = 0;
         cart.forEach(product => {
@@ -22,7 +23,7 @@ class Books {
         cart.forEach(c => {
             totalPrice += this.getBookById(c.id, booksStore).price * c.count;
         });
-        return totalPrice + 'Eur';
+        return totalPrice.toFixed(2) + 'Eur';
     }
 //  PERZIURIM KOKIE PRODUKTAI KREPSELYJE
     static  getCartView(cart, booksStore) {

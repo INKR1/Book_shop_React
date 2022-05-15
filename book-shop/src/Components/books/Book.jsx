@@ -6,9 +6,9 @@ export function Book({ book, likeButtonPressed, like, addBtnClick }) {
   return (
     <div className="kv big kv_3">
         <img src={book.img} alt='books'/>
-        <small>{book.title}</small>
+        <small style={{overflow:'auto'}}>{book.title}</small>
         <i><strong>{book.author}</strong></i>
-        <div className="price">{book.price} Eur</div>
+        <div className="price">{book.price.toFixed(2)} Eur</div>
         
         <svg className={like ? 'like' : ''} onClick={() => likeButtonPressed(book.id)}>
             <use xlinkHref="#heart"></use>

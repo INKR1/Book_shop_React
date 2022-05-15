@@ -5,15 +5,7 @@ import {BooksList} from './Components/books/BooksList';
 import {Ranger} from './Components/books/Ranger';
 import { Cart } from './Components/books/Cart';
 import Books from './Functions/Books';
-
-
-// const cart = [
-
-//     {id:2, count: 1},
-//     {id:4, count: 2},
-//     {id:8, count: 8},
-// ];
-
+// import {book, book1, book2, books} from './Components/image';
 
 
 function App() {
@@ -45,10 +37,6 @@ function App() {
         if(!dataReceived){
             return;
         } 
-        // setCartView(booksStore.current
-        // .filter(b => cart.map(cb => cb.id).indexOf(b.id) !== -1)
-        // .map(b => ({...b, count: cart[cart.map(cb => cb.id).indexOf(b.id)].count})));
-
         setCartView(Books.getCartView(cart, booksStore.current));
     }, [dataReceived, cart]);
 
@@ -64,13 +52,6 @@ function App() {
         }
         setBooksCartPrice(Books.getCartPrice(cart, booksStore.current));
     }, [dataReceived, cart]);
-
-    // useEffect(() => {
-    //     if(!dataReceived){
-    //         return;
-    //     }
-    //     setCart(Books.addToCart(cart, booksStore.current));
-    // }, [dataReceived]);
 
 
     useEffect(() => {
@@ -187,9 +168,8 @@ function App() {
        
 
     const likeButtonPressed = id => {
-       // isivaizduokit kad cia reduseris
        change.current = true;
-       const likesCopy = new Set(likes); // fancy kopija
+       const likesCopy = new Set(likes); 
        likesCopy.has(id) ? likesCopy.delete(id) : likesCopy.add(id);
        setLikes(likesCopy);
     }
@@ -199,13 +179,17 @@ function App() {
         <div className="App">
             <h1>Books Store</h1>
             <div className="kvc">
-                <svg className='arrow arrow_up ' onClick={() => setSort('asc')}>
-                    <use xlinkHref="#arrow"></use>
-                </svg>
-                <svg className='arrow arrow_down'onClick={() => setSort('desc')}>
-                    <use xlinkHref="#arrow"></use>
-                </svg>
-                <Ranger minMax={minMax} filter={filter} setFilter={setFilter}/>
+                <div className='arrow_container'>
+                    <svg className='arrow arrow_up ' onClick={() => setSort('asc')}>
+                        <use xlinkHref="#arrow"></use>
+                    </svg>
+                    <svg className='arrow arrow_down'onClick={() => setSort('desc')}>
+                        <use xlinkHref="#arrow"></use>
+                    </svg>
+                </div>
+                <div> 
+                    <Ranger minMax={minMax} filter={filter} setFilter={setFilter}/>
+                </div>
             </div>
             <BooksList likeButtonPressed={likeButtonPressed} books={books} addBtnClick={addBtnClick} likes={likes}></BooksList>
             <div className="cart">
