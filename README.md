@@ -12,7 +12,4 @@ After you add books into the cart you can check depending on the number of books
 
 2. <img width="362" alt="book-store-cart" src="https://user-images.githubusercontent.com/92999496/168610089-4f35f8ec-0135-4453-b0b5-0f387a94d042.png">
 
-## Live view
-
-For live view click [_here_](https://inkr1.github.io/book-shop/)
 
